@@ -1,4 +1,5 @@
-import { UserListRequest } from "@/types/user";
+import { ApiResponse, PaginationResponse } from "@/types";
+import { User, UserListRequest } from "@/types/user";
 import request from "@/utils/request";
 
 // 用户登录
@@ -26,3 +27,14 @@ export const getUserList = (params: UserListRequest) => {
     params, // 自动转换为查询字符串
   });
 };
+
+// // 获取用户列表
+// export const getUserList = (
+//   params: UserListRequest
+// ): Promise<ApiResponse<PaginationResponse<User>>> => {
+//   return request({
+//     url: "/user/list",
+//     method: "get",
+//     params, // 自动转换为查询字符串
+//   });
+// };
